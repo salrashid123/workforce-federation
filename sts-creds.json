@@ -1,0 +1,13 @@
+{
+  "type": "external_account",
+  "audience": "//iam.googleapis.com/locations/global/workforcePools/wfpool-oidc/providers/wfprovider-1",
+  "subject_token_type": "urn:ietf:params:oauth:token-type:id_token",
+  "token_url": "https://sts.googleapis.com/v1/token",
+  "credential_source": {
+    "file": "/tmp/oidccred.txt",
+    "format": {
+      "type": "text"
+    }
+  },
+  "workforce_pool_user_project": "248066739582"
+}

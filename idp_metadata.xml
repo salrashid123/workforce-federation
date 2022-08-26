@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="authn.py" validUntil="2026-12-16T17:18:02.000Z">
+  <md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIEPjCCAyagAwIBAgIBATANBgkqhkiG9w0BAQsFADBXMQswCQYDVQQGEwJVUzEP
+MA0GA1UECgwGR29vZ2xlMRMwEQYDVQQLDApFbnRlcnByaXNlMSIwIAYDVQQDDBlF
+bnRlcnByaXNlIFN1Ym9yZGluYXRlIENBMB4XDTIyMDEwOTIyMTAzNloXDTI3MDcw
+MjIyMTAzNlowUzELMAkGA1UEBhMCVVMxDzANBgNVBAoMBkdvb2dsZTETMBEGA1UE
+CwwKRW50ZXJwcmlzZTEeMBwGA1UEAwwVc2VydmVyLnlvdXJkb21haW4uY29tMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw0PQuP452qvSZetyW/hqFIkg
+CCSc+6Ryw+rRPUIcVZIuibonJeSJe+TXPvonUEzAgpt858ji+FUsFVDsLmcX2yLF
+DO0AtV3JA04wbJb8bSujvVstzpVAvY/gIAADrs8gqybekgSnUxOtXlFeYmYjxdNF
+sx1qFqaE0nrRJzZIlarhaym38+Tta5+rJPlrZKOVoCgOqAYyQ5LH0/epEJh5U2Du
+g2aZRcdULdqORbftDqqliheG2atd/tCQxKxVHQrRnWmnyE0ZJEpnn9/faSX8vqtz
+Zu/5Z4FUt5TcyB9dyKrvaKjGwM6ON+5QYsKI08FxlqQ/Uhp5PrRFni5TCmfJWQID
+AQABo4IBFzCCARMwDgYDVR0PAQH/BAQDAgeAMAkGA1UdEwQCMAAwEwYDVR0lBAww
+CgYIKwYBBQUHAwEwHQYDVR0OBBYEFEmBqhsOJAb2CGD7SiVS0tnJbQNOMB8GA1Ud
+IwQYMBaAFLe6sAKh5740xsEFXGZ45btTXaFUMEQGCCsGAQUFBwEBBDgwNjA0Bggr
+BgEFBQcwAoYoaHR0cDovL3BraS5lc29kZW1vYXBwMi5jb20vY2EvdGxzLWNhLmNl
+cjA5BgNVHR8EMjAwMC6gLKAqhihodHRwOi8vcGtpLmVzb2RlbW9hcHAyLmNvbS9j
+YS90bHMtY2EuY3JsMCAGA1UdEQQZMBeCFXNlcnZlci55b3VyZG9tYWluLmNvbTAN
+BgkqhkiG9w0BAQsFAAOCAQEAghT4lTRNTN95pVLFqvopmuOhxt+MJVzGeeIwOZCH
+IP2GOWzucuHqxyhlvDHtDmJSGB4tsC5EExZ+nThQdNiLB0QfMzj+OHUQHeA3RQp5
+NgK3/Cvhzjd0zptC9X2pFC1vIRdvS+qGQMUbre0gZ01WCrd6p4WDRy8rblB9aW7J
+OVgo6zV+4yAgson4RYa70N7HlcWgwfYmlS6YhRNJKMJbjDSFj1aA8HkCoUQZlkES
+VT642mI/pwjL2U6eEyDVL0v+2yeDAsP4Jg+TdjNXumbLiWYIDUVa19Eqaz4LeXB+
+T1Y96kb1pfIDuUf92nSnoUmTn4cijwdub8WqlJXX9Q6RNw==</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.idpdomain.com:28080/login"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.idpdomain.com:28080/login"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>
