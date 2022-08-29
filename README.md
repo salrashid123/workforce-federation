@@ -1,4 +1,4 @@
-## Using Google Cloud WorkforcePools with SAML
+## Using Google Cloud Workforce Identity Federation with SAML
 
 A sample demo of using GCP [WorkForce Identity Federation](https://cloud.google.com/iam/docs/workforce-identity-federation) using a local `SAML IDP server`.
 
@@ -6,7 +6,7 @@ A sample demo of using GCP [WorkForce Identity Federation](https://cloud.google.
 
 With Work**Force** Identity, you still retain your users in your IDP but instead of synchronizing users, you will map and federate login and access to GCP resources.  In this mode, you still use your own SSO system but access to the resource is using a federated identity binding.
 
-Note, this is about Work_Force_ Federation (users).  Work_Load_ federation is more services accessing GCP Resources (https://cloud.google.com/iam/docs/workload-identity-federation).   WorkForce operates at the organization level while WorLoad is at the project level.
+Note, this is about _WorkForce_ Federation (users).  _[WorkLoad_ Federation](https://cloud.google.com/iam/docs/workload-identity-federation) is more services accessing GCP Resources.   WorkForce operates at the organization level while WorLoad is at the project level.
 
 
 >> The sample SSO Servers here is NOT supported by google!  Just in non-prod and even then just to test; remember to remove the configuration.
@@ -32,7 +32,7 @@ gcloud projects add-iam-policy-binding  $PROJECT_ID   \
 
 You'll need access to a cloud org to create the configuration...
 
->>> **NOTE** I do NOT really expect you to configure this end-to-end using a demo SSO provider here with the built-in certificates.  While you can follow this end-to-end, atleast generate your own certificates (eg, `server.crt`, `server.key` and then use that public cert in `iap_metadata.xml` file).  Once you i would recommend immediately disabling the configuration...or atleast 
+>>> **NOTE** I do NOT really expect you to configure this end-to-end using a demo SSO provider here with the built-in certificates.  While you can follow this end-to-end, atleast generate your own certificates (eg, `server.crt`, `server.key` and then use that public cert in `iap_metadata.xml` file).  Once you i would recommend immediately disabling the configuration...
 
 
 ---
