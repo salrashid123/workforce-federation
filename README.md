@@ -74,7 +74,7 @@ export ORGANIZATION_ID=673208781234
 
 gcloud config set billing/quota_project $BILLING_PROJECT_ID
 
-gcloud organizations add-iam-policy-binding \
+gcloud organizations add-iam-policy-binding $ORGANIZATION_ID \
     --member "user:$GCLOUD_USER" --role roles/iam.workforcePoolAdmin 
 ```
 
@@ -201,7 +201,30 @@ If you enabled audit logs, you'll see access to the resources as the federated `
 
 For gcloud CLI, we need someway to pump the SAML Assertion  to a file or accessible via website:
 
-In our case, we'll pump it to a file
+In our case, we'll pump it to a file by you can certainly delegate it to an executable file on your workstation:
+
+
+```json
+{
+  "type": "external_account",
+  ...
+  ...
+  "credential_source": {
+    "executable": {
+      "command": "/path/to/executable --arg1=value1 --arg2=value2",
+      "timeout_millis": 5000,
+      "output_file": "/path/to/cached/credentials"
+    }
+  }
+}
+```
+
+
+see [https://google.aip.dev/auth/4117](https://google.aip.dev/auth/4117) and the `--executable-command=` argument for [gcloud cli](https://cloud.google.com/sdk/gcloud/reference/iam/workload-identity-pools/create-cred-config)
+
+
+anyway, for now we'll just save the raw token to a readable file (which is't realistic but this is a demo and i don't want to write the executable )
+
 
 ```bash
 cd gcpcompat-saml
